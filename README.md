@@ -2,10 +2,26 @@
 
 This project is used to speed up lumen framework with swoole extension.
 
+## version support
+
+has been used with ``lumen 5.7.x``
+
 ## install
 
-```bash
-todo
+change composer.json
+
+```json
+{
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://git.kaiyuan.net/guojianchao/lumen-swoole.git"
+        }
+    ],
+    "require": {
+        "kaiyuan-finance/lumen-swoole": "dev-master"
+    }
+}
 ```
 
 ## usage
