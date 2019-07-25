@@ -1,0 +1,26 @@
+{
+  "name": "kaiyuan-finance/lumen-swoole",
+  "description": "speedup lumen by swoole",
+  "keywords": ["lumen", "swoole", "speedup", "http server"],
+  "authors": [
+    {
+      "name": "Jake Guo",
+      "role": "lead"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "KYF\\LumenSwoole\\": "src"
+    }
+  },
+  "bin": [
+    "lumen-server"
+  ],
+  "require": {
+    "php": ">=7.1.3",
+    "ext-swoole": "4.*"
+  },
+  "require-dev": {
+    "swoole/ide-helper": "~4.3.3"
+  }
+}

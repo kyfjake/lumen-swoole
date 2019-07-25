@@ -1,0 +1,33 @@
+#!/usr/bin/env php
+<?php
+
+$dir = realpath(dirname($_SERVER['SCRIPT_FILENAME']));
+
+/**
+ * require autoload
+ */
+foreach (array($dir . '/../autoload.php', $dir . '/../../autoload.php', $dir . '/vendor/autoload.php', $dir . '/../vendor/autoload.php') as $file) {
+    if (file_exists($file)) {
+        require_once $file;
+        break;
+    }
+}
+
+$root_path = null;
+foreach (array($dir . '/../..', $dir . '/../', $dir) as $file) {
+    if (file_exists($file . '/bootstrap/app.php')) {
+        $root_path = realpath($file);
+        break;
+    }
+}
+
+if ($root_path) {
+    define("LUMEN_ROOT", $root_path);
+} else {
+    throw new Exception("Project root detect failed!");
+}
+
+$options = getopt(KYF\LumenSwoole\Http\LumenServer::$options, KYF\LumenSwoole\Http\LumenServer::$long_opt);
+
+$server = new KYF\LumenSwoole\Http\LumenServer($options);
+$server->run($argv[$argc - 1]);
