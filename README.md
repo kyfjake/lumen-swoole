@@ -10,18 +10,8 @@ has been used with ``lumen 5.7.x``
 
 change composer.json
 
-```json
-{
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://git.kaiyuan.net/guojianchao/lumen-swoole.git"
-        }
-    ],
-    "require": {
-        "kaiyuan-finance/lumen-swoole": "dev-master"
-    }
-}
+```bash
+composer require kyfjake/lumen-swoole @dev
 ```
 
 ## usage
