@@ -1,5 +1,5 @@
 {
-  "name": "kaiyuan-finance/lumen-swoole",
+  "name": "kyfjake/lumen-swoole",
   "description": "speedup lumen by swoole",
   "keywords": ["lumen", "swoole", "speedup", "http server"],
   "authors": [
